@@ -7,7 +7,7 @@
     </head>
     <body>
         <div>
-            <form method="get" role="form" novalidate>
+            <form method="post" role="form" novalidate>
                 <legend>Contact</legend>
                 <fieldset>
                     <div>
@@ -76,7 +76,7 @@
       var formData = $form.serialize();
       $.ajax({
         url: 'processForm.php',
-        type: 'GET',
+        type: 'POST',
         dataType: 'json',
         data: formData + '&submit=' + $form.find('button').val(),
       })
